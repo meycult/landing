@@ -81,7 +81,7 @@ export default function MerchSection() {
         {products.slice(0, 5).map((product) => {
           const isBeanie = product.slug.includes('beanie')
           const imgIdx = isBeanie && product.images.length > 1 ? 1 : 0
-          const image = product.images?.[imgIdx]?.transformedUrl || product.images?.[imgIdx]?.url || ''
+          const image = `/products/${product.slug}-${imgIdx}.jpg`
           const price = product.variants?.length
             ? Math.min(...product.variants.map((v) => v.unitPrice.value))
             : 0

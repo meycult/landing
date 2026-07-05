@@ -103,7 +103,7 @@ export default function ProductPage() {
           <div>
             {product.images?.[0] ? (
               <img
-                src={product.images[0].url}
+                src={`/products/${product.slug}-0.jpg`}
                 alt={product.name}
                 className="w-full aspect-square object-contain rounded-2xl landing-card p-8"
               />

@@ -66,3 +66,8 @@ export function getCheckoutUrl(cartId: string): string {
 export function formatPrice(value: number, currency = 'USD'): string {
   return new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(value)
 }
+
+export function proxyImage(url: string): string {
+  if (!url || !url.includes('imgproxy.fourthwall.dev')) return url
+  return `/api/image?url=${encodeURIComponent(url)}`
+}
