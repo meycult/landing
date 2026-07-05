@@ -26,12 +26,11 @@ export default function MobileNavbar() {
         </Link>
 
         <div className="flex items-center gap-2 flex-shrink-0">
-          <Link href="/shop" className="text-[10px] font-medium uppercase tracking-wider text-text-muted hover:text-text">
+          <Link href="/shop" className="text-[10px] font-medium uppercase tracking-wider text-text-muted hover:text-text whitespace-nowrap">
             <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, textTransform: 'none' }}>
               <span style={{ color: 'var(--color-text)' }}>Mey</span>
               <span style={{ color: 'var(--color-accent)' }}>Cult</span>
-            </span>{' '}
-            <span style={{ fontFamily: 'var(--font-heading)' }}>SHOP</span>
+            </span>{' '}SHOP
           </Link>
 
           <span className="inline-block rounded-lg p-[2px]" style={{ background: 'linear-gradient(135deg, #22e06a, #6effa0)' }}>

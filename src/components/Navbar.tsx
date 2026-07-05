@@ -56,10 +56,12 @@ export default function Navbar() {
               }`}
             >
               {link.branded ? (
-                <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, textTransform: 'none' }}>
-                  <span style={{ color: 'var(--color-text)' }}>Mey</span>
-                  <span style={{ color: 'var(--color-accent)' }}>Cult</span>
-                  {' '}<span style={{ fontFamily: 'var(--font-heading)' }}>SHOP</span>
+                <span className="whitespace-nowrap">
+                  <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, textTransform: 'none' }}>
+                    <span style={{ color: 'var(--color-text)' }}>Mey</span>
+                    <span style={{ color: 'var(--color-accent)' }}>Cult</span>
+                  </span>{' '}
+                  <span className="uppercase tracking-wider">SHOP</span>
                 </span>
               ) : (
                 link.label

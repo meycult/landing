@@ -33,13 +33,13 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative text-[5rem] leading-none mt-6 tracking-wider font-bold">
+      <div className="relative text-[5rem] leading-none mt-2 tracking-wider font-bold">
         <span className="relative">
           <BrandName />
         </span>
       </div>
 
-      <div className="relative mt-4">
+      <div className="relative mt-2">
         <div
           className="absolute inset-0 flex items-center justify-center pointer-events-none"
           style={{
@@ -62,10 +62,10 @@ export default function HeroSection() {
           WELCOME TO THE CULT
         </h1>
       </div>
-      <p className="text-sm text-text-muted max-w-md mt-6">
+      <p className="text-sm text-text-muted max-w-md mt-3">
         A gamified prediction market on Base L2. Turn real-world event predictions into an RPG adventure.
       </p>
-      <LaunchButton className="mt-8" />
+      <LaunchButton className="mt-4" />
     </section>
   )
 }

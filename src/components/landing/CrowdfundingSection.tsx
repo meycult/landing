@@ -26,7 +26,8 @@ export default function CrowdfundingSection() {
       if (error && error.code !== '23505') throw error
       setStatus('done')
       setEmail('')
-    } catch {
+    } catch (e) {
+      console.error('Crowdfunding signup error:', e)
       setStatus('error')
     }
   }

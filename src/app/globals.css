@@ -263,6 +263,14 @@ h2 {
   text-align: center;
 }
 
+@media (max-width: 640px) {
+  .section--hero {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    min-height: auto;
+  }
+}
+
 .section-title {
   font-family: var(--font-heading);
   font-weight: 300;
