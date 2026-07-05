@@ -100,20 +100,6 @@ export default function ProductGrid() {
           </div>
         </div>
 
-        <div className="landing-card p-6 mt-6 mb-8 flex flex-col sm:flex-row items-center gap-5">
-          <Sigil size={48} />
-          <div className="text-center sm:text-left">
-            <p className="text-base font-bold text-white mb-1"
-              style={{ fontFamily: 'var(--font-heading)', letterSpacing: '0.05em', textShadow: '0 0 10px rgba(255,255,255,0.1)' }}>
-              Every purchase enters you in the upcoming ownership pull.
-            </p>
-            <p className="text-xs text-text-muted leading-relaxed">
-              We&apos;re building this in public. Each item you buy is a ticket into the community crowdfunding round. 
-              Wear the sigil early, own a piece of the prophecy. No purchase necessary — free entry available below.
-            </p>
-          </div>
-        </div>
-
         {loading && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {Array.from({ length: 3 }).map((_, i) => (
@@ -124,7 +110,30 @@ export default function ProductGrid() {
 
         {!loading && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {products.map((product) => (
+            {products.slice(0, 3).map((product) => (
+              <ProductCard key={product.id} product={product} onAddToCart={handleBuy} usingLocal={usingLocal} />
+            ))}
+          </div>
+        )}
+
+        {!loading && products.length > 3 && (
+          <div className="landing-card p-5 mt-4 mb-4 flex flex-col sm:flex-row items-center gap-4">
+            <Sigil size={32} />
+            <div className="text-center sm:text-left">
+              <p className="text-sm font-bold text-white mb-0.5"
+                style={{ fontFamily: 'var(--font-heading)', letterSpacing: '0.05em' }}>
+                Every purchase enters you in the upcoming ownership pull.
+              </p>
+              <p className="text-[11px] text-text-muted leading-relaxed">
+                Each item you buy is a ticket into the community crowdfunding round. No purchase necessary.
+              </p>
+            </div>
+          </div>
+        )}
+
+        {!loading && products.length > 3 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+            {products.slice(3).map((product) => (
               <ProductCard key={product.id} product={product} onAddToCart={handleBuy} usingLocal={usingLocal} />
             ))}
           </div>
