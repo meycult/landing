@@ -88,9 +88,11 @@ export default function MerchSection() {
           const currency = product.variants?.[0]?.unitPrice.currency || 'USD'
 
           return (
-            <Link
+            <a
               key={product.id}
-              href={`/shop/${product.slug}`}
+              href={`https://meyempire-shop.fourthwall.com/products/${product.slug}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="landing-card flex flex-col overflow-hidden group w-full sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-1.111rem)]"
             >
               <div className="aspect-square bg-surface/10 flex items-center justify-center p-4 overflow-hidden">
@@ -111,7 +113,7 @@ export default function MerchSection() {
                 </h3>
                 <span className="text-sm font-bold text-accent flex-shrink-0" style={{ fontFamily: 'var(--font-body)', fontVariantNumeric: 'tabular-nums' }}>{formatPrice(price, currency)}</span>
               </div>
-            </Link>
+            </a>
           )
         })}
       </div>

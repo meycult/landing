@@ -86,13 +86,14 @@ export default function ProductCard({
           ) : (
             <span className="text-sm font-bold text-accent" style={{ fontFamily: 'var(--font-body)', fontVariantNumeric: 'tabular-nums' }}>{formatPrice(price, currency)}</span>
           )}
-          <button
-            onClick={() => onAddToCart(product)}
-            disabled={soldOut}
+          <a
+            href={`https://meyempire-shop.fourthwall.com/products/${product.slug}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-3 py-1.5 rounded-lg bg-accent text-bg font-bold text-[10px] uppercase tracking-wider hover:bg-accent/80 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
           >
             BUY
-          </button>
+          </a>
         </div>
       </div>
     </div>

@@ -36,16 +36,8 @@ export default function ProductGrid() {
       .finally(() => setLoading(false))
   }, [])
 
-  function handleAddToCart(product: Product) {
-    if (usingLocal) {
-      router.push(`/shop/${product.slug}`)
-      return
-    }
-    if (product.variants.length === 1) {
-      addItem(product.variants[0].id, 1)
-    } else {
-      router.push(`/shop/${product.slug}`)
-    }
+  function handleBuy(product: Product) {
+    router.push(`/shop/${product.slug}`)
   }
 
   return (
@@ -133,7 +125,7 @@ export default function ProductGrid() {
         {!loading && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {products.map((product) => (
-              <ProductCard key={product.id} product={product} onAddToCart={handleAddToCart} usingLocal={usingLocal} />
+              <ProductCard key={product.id} product={product} onAddToCart={handleBuy} usingLocal={usingLocal} />
             ))}
           </div>
         )}
