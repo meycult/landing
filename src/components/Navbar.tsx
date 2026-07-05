@@ -56,12 +56,6 @@ export default function Navbar() {
               }`}
             >
               {link.label}
-              {mounted && active && (
-                <span
-                  className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full"
-                  style={{ backgroundColor: 'var(--color-accent)', boxShadow: '0 0 8px var(--color-accent)' }}
-                />
-              )}
             </Link>
           )
         })}

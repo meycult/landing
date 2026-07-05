@@ -8,6 +8,7 @@ export default function CornerGlow() {
       <div className="corner-glow corner-glow--bl" />
       <div className="corner-glow corner-glow--br" />
       <div className="corner-glow corner-glow--ct" />
+      <div className="corner-glow corner-glow--cb" />
     </>
   )
 }
