@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Rajdhani, Space_Grotesk, Space_Mono, Chakra_Petch } from 'next/font/google'
 import Navbar from '@/components/Navbar'
+import MobileNavbar from '@/components/MobileNavbar'
 import Footer from '@/components/Footer'
 import CornerGlow from '@/components/CornerGlow'
 import './globals.css'
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className="dark">
       <body className={`${rajdhani.variable} ${spaceGrotesk.variable} ${spaceMono.variable} ${chakraPetch.variable} min-h-screen bg-bg text-text font-sans antialiased`}>
         <CornerGlow />
+        <MobileNavbar />
         <Navbar />
         <main>{children}</main>
         <Footer />

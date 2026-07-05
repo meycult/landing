@@ -10,7 +10,7 @@ export default function WhitepaperPage() {
 
         <div className="flex flex-col items-center mb-12 pt-4">
           <Sigil size={48} />
-          <h1 className="text-4xl font-light uppercase tracking-[0.1em] mt-4"
+          <h1 className="text-3xl sm:text-4xl font-light uppercase tracking-[0.1em] mt-4 text-center"
             style={{ fontFamily: 'var(--font-heading)', color: '#ffffff' }}>
             <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, textTransform: 'none' }}>
               <span style={{ color: 'var(--color-text)' }}>Mey</span>

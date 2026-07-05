@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="relative z-10 border-t border-line/10 py-12 px-6">
       <div className="max-w-[1200px] mx-auto flex flex-col items-center gap-4 text-center">
-        <div className="flex items-center gap-6 text-xs text-text-muted">
+        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-6 text-xs text-text-muted">
           <Link href="/whitepaper" className="hover:text-text transition-colors uppercase tracking-wider">
             Whitepaper
           </Link>

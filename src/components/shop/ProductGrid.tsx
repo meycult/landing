@@ -70,7 +70,7 @@ export default function ProductGrid() {
           )}
         </div>
 
-        <div className="landing-card p-6 mt-10 text-center">
+        <div className="landing-card p-6 mt-10 mb-6 text-center">
           <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-3"
             style={{ fontFamily: 'var(--font-heading)', textShadow: '0 0 8px rgba(255,255,255,0.1)' }}>
             How It Works

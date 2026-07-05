@@ -28,7 +28,7 @@ export default function HeroSection() {
             top: '-40px',
           }}
         />
-        <div className="relative">
+        <div className="relative scale-[0.7] sm:scale-100">
           <Sigil size={240} />
         </div>
       </div>

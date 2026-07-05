@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { InfluenceIcon, FateIcon } from '@/components/TokenIcons'
 
 const stops = [
@@ -39,6 +40,29 @@ export default function RoadmapSection() {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="flex justify-center mt-8">
+        <Link
+          href="/whitepaper"
+          className="inline-block rounded-lg p-[2px] hover:scale-[1.02] transition-all"
+          style={{ background: 'linear-gradient(135deg, #22e06a, #6effa0)' }}
+        >
+          <span
+            className="block px-8 py-3 rounded-[6px] font-bold text-sm tracking-wider hover:opacity-90 transition-all"
+            style={{
+              background: 'linear-gradient(135deg, #030d07, #0d5c35)',
+              color: '#ffffff',
+              boxShadow: '0 0 80px rgba(34,224,106,0.08), 0 0 120px rgba(34,224,106,0.05)',
+            }}
+          >
+            <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, textTransform: 'none' }}>
+              <span style={{ color: '#ffffff' }}>Mey</span>
+              <span style={{ color: 'var(--color-accent)' }}>Cult</span>
+            </span>{' '}
+            <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700 }}>Whitepaper</span>
+          </span>
+        </Link>
       </div>
     </section>
   )

@@ -8,7 +8,7 @@ import LaunchButton from './LaunchButton'
 
 const links = [
   { label: 'Home', href: '/' },
-  { label: 'Shop', href: '/shop' },
+  { label: 'Shop', href: '/shop', branded: true },
   { label: 'Whitepaper', href: '/whitepaper' },
 ]
 
@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed z-50 left-1/2 -translate-x-1/2 flex items-center rounded-[20px] px-6"
+      className="hidden sm:flex fixed z-50 left-1/2 -translate-x-1/2 items-center rounded-[20px] px-6"
       style={{
         top: '20px',
         height: '68px',
@@ -42,7 +42,7 @@ export default function Navbar() {
       />
       <Logo size={24} className="!gap-2" />
 
-      <div className="hidden sm:flex items-center ml-6 gap-1" suppressHydrationWarning>
+      <div className="flex items-center ml-6 gap-1" suppressHydrationWarning>
         {links.map((link) => {
           const active = link.href === '/' ? isHome : pathname.startsWith(link.href)
           return (
@@ -55,7 +55,15 @@ export default function Navbar() {
                   : 'text-text-muted hover:text-text hover:bg-accent/5'
               }`}
             >
-              {link.label}
+              {link.branded ? (
+                <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, textTransform: 'none' }}>
+                  <span style={{ color: 'var(--color-text)' }}>Mey</span>
+                  <span style={{ color: 'var(--color-accent)' }}>Cult</span>
+                  {' '}<span style={{ fontFamily: 'var(--font-heading)' }}>SHOP</span>
+                </span>
+              ) : (
+                link.label
+              )}
             </Link>
           )
         })}
