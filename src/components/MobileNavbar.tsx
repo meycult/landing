@@ -6,9 +6,10 @@ import { ShoppingBag } from 'lucide-react'
 
 export default function MobileNavbar() {
   return (
-    <nav
-      className="sm:hidden fixed z-50 left-2 right-2 top-3 flex items-center justify-between rounded-2xl px-4 py-2.5"
-      style={{
+    <div className="sm:hidden fixed z-50 inset-x-2 top-3">
+      <nav
+        className="flex items-center justify-between rounded-2xl px-3 py-2.5 w-full overflow-hidden"
+        style={{
         background: 'rgba(255,255,255,0.05)',
         backdropFilter: 'blur(24px) saturate(160%)',
         WebkitBackdropFilter: 'blur(24px) saturate(160%)',
@@ -49,5 +50,6 @@ export default function MobileNavbar() {
         </span>
       </div>
     </nav>
+    </div>
   )
 }
