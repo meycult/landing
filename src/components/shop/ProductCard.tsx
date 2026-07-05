@@ -15,7 +15,9 @@ export default function ProductCard({
   onAddToCart: (product: Product) => void
   usingLocal?: boolean
 }) {
-  const images = product.images?.slice(0, 8).map((_, i) => `/products/${product.slug}-${i}.jpg`) || []
+  const images = usingLocal
+    ? (product.images?.[0]?.url ? [product.images[0].url] : [])
+    : (product.images || []).slice(0, 8).map((_, i) => `/products/${product.slug}-${i}.jpg`)
   const [imgIndex, setImgIndex] = useState(0)
 
   const price = product.variants?.length
