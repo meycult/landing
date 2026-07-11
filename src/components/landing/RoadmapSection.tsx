@@ -3,9 +3,9 @@ import { InfluenceIcon, FateIcon } from '@/components/TokenIcons'
 
 const stops = [
   { phase: '1', title: 'Prototype', text: 'Design system, branding, theme exploration', filled: true },
-  { phase: '2', title: 'Core MVP', text: 'Frontend app, Supabase, auth, game store', filled: true },
-  { phase: '3', title: 'Contracts', text: <>Smart contracts: <InfluenceIcon size={11} /> <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, color: 'var(--color-accent)' }}>Influence</span> + <FateIcon size={11} /> <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, color: 'var(--color-accent)' }}>Fate</span> tokens + QuestFragment NFTs on Base L2</>, filled: false },
-  { phase: '4', title: 'Quest Markets', text: 'Betting engine, hero roster, live quest board', filled: false },
+  { phase: '2', title: 'Core MVP', text: 'Frontend app, Supabase auth, embedded wallets', filled: true },
+  { phase: '3', title: 'Markets & Crypto', text: <>AI-seeded prediction markets + parimutuel wagering with <InfluenceIcon size={11} /> <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700 }}><span style={{ color: 'var(--color-text)' }}>Mey</span><span style={{ color: 'var(--color-accent)' }}>Influence</span></span> + <FateIcon size={11} /> <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700 }}><span style={{ color: 'var(--color-text)' }}>Mey</span><span style={{ color: 'var(--color-accent)' }}>Fate</span></span> on Base L2</>, filled: true },
+  { phase: '4', title: 'Gamification', text: 'Cults, heroes, tarot decks, virtues & badges', filled: false },
   { phase: '5', title: 'Launch', text: 'Audit, mainnet, open source, YouTube stream', filled: false },
 ]
 

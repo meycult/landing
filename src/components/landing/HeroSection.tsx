@@ -62,10 +62,31 @@ export default function HeroSection() {
           WELCOME TO THE CULT
         </h1>
       </div>
-      <p className="text-sm text-text-muted max-w-md mt-3">
-        A gamified prediction market on Base L2. Turn real-world event predictions into an RPG adventure.
+      <p className="text-base text-text max-w-md mt-3 font-medium">
+        Bet on real-world events. Win crypto. Free to play.
+      </p>
+      <p className="text-xs text-text-muted max-w-md mt-1.5">
+        AI-seeded prediction markets, reimagined as an RPG on Base L2.
       </p>
       <LaunchButton className="mt-4" />
+      <p className="text-[11px] text-text-muted mt-3 tracking-wide">
+        Free daily <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700 }}><span style={{ color: 'var(--color-text)' }}>Mey</span><span style={{ color: 'var(--color-accent)' }}>Influence</span></span> · real USDC cash-out · sweepstakes-legal
+      </p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-8 w-full max-w-2xl">
+        {[
+          { n: '1', t: 'Pick a quest', d: 'Real-world events, seeded hourly from Polymarket.' },
+          { n: '2', t: 'Wager MeyFate', d: 'Back YES or NO with free or premium tokens.' },
+          { n: '3', t: 'Win the pool', d: 'Winners split the pot. Cash out to USDC.' },
+        ].map((s) => (
+          <div key={s.n} className="landing-card p-4 text-center">
+            <div className="w-8 h-8 rounded-full mx-auto mb-2 flex items-center justify-center text-sm font-bold"
+              style={{ border: '2px solid var(--color-accent)', color: 'var(--color-accent)' }}>{s.n}</div>
+            <h3 className="text-sm font-bold text-text uppercase tracking-wider" style={{ fontFamily: 'var(--font-heading)' }}>{s.t}</h3>
+            <p className="text-[11px] text-text-muted mt-1 leading-relaxed">{s.d}</p>
+          </div>
+        ))}
+      </div>
     </section>
   )
 }

@@ -24,7 +24,7 @@ export function InfluenceText({ size = 13 }: { size?: number }) {
   return (
     <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, whiteSpace: 'nowrap' }}>
       <InfluenceIcon size={size} />{' '}
-      <span style={{ color: 'var(--color-text)' }}>Cult </span>
+      <span style={{ color: 'var(--color-text)' }}>Mey</span>
       <span style={{ color: 'var(--color-accent)' }}>Influence</span>
     </span>
   )
@@ -34,7 +34,7 @@ export function FateText({ size = 13 }: { size?: number }) {
   return (
     <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, whiteSpace: 'nowrap' }}>
       <FateIcon size={size} />{' '}
-      <span style={{ color: 'var(--color-text)' }}>Cult </span>
+      <span style={{ color: 'var(--color-text)' }}>Mey</span>
       <span style={{ color: 'var(--color-accent)' }}>Fate</span>
     </span>
   )

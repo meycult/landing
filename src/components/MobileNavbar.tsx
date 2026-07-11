@@ -21,17 +21,17 @@ export default function MobileNavbar() {
               <span style={{ color: 'var(--color-text)' }}>Mey</span>
               <span style={{ color: 'var(--color-accent)', textShadow: '0 0 10px rgba(255,255,255,0.3)' }}>Cult</span>
             </div>
-            <div className="text-[8px] uppercase tracking-widest text-text-muted" style={{ fontFamily: 'var(--font-logo)' }}>Quest Markets</div>
+            <div className="text-[8px] uppercase tracking-widest text-text-muted" style={{ fontFamily: 'var(--font-logo)' }}>Wager &amp; Join</div>
           </div>
         </Link>
 
         <div className="flex items-center gap-2 flex-shrink-0">
-          <Link href="/shop" className="text-[10px] font-medium uppercase tracking-wider text-text-muted hover:text-text whitespace-nowrap">
+          <a href="https://shop.meycult.com" className="text-[10px] font-medium uppercase tracking-wider text-text-muted hover:text-text whitespace-nowrap">
             <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, textTransform: 'none' }}>
               <span style={{ color: 'var(--color-text)' }}>Mey</span>
               <span style={{ color: 'var(--color-accent)' }}>Cult</span>
             </span>{' '}SHOP
-          </Link>
+          </a>
 
           <span className="inline-block rounded-lg p-[2px]" style={{ background: 'linear-gradient(135deg, #22e06a, #6effa0)' }}>
             <a

@@ -7,9 +7,9 @@ import Logo from './Logo'
 import LaunchButton from './LaunchButton'
 
 const links = [
-  { label: 'Home', href: '/' },
-  { label: 'Shop', href: '/shop', branded: true },
-  { label: 'Whitepaper', href: '/whitepaper' },
+  { label: 'Home', href: '/', external: false },
+  { label: 'Shop', href: 'https://shop.meycult.com', branded: true, external: true },
+  { label: 'Whitepaper', href: '/whitepaper', external: false },
 ]
 
 export default function Navbar() {
@@ -44,29 +44,27 @@ export default function Navbar() {
 
       <div className="flex items-center ml-6 gap-1" suppressHydrationWarning>
         {links.map((link) => {
-          const active = link.href === '/' ? isHome : pathname.startsWith(link.href)
-          return (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`relative text-xs font-medium uppercase tracking-wider py-2 px-3 rounded-lg transition-colors ${
-                mounted && active
-                  ? 'text-text bg-accent/8'
-                  : 'text-text-muted hover:text-text hover:bg-accent/5'
-              }`}
-            >
-              {link.branded ? (
-                <span className="whitespace-nowrap">
-                  <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, textTransform: 'none' }}>
-                    <span style={{ color: 'var(--color-text)' }}>Mey</span>
-                    <span style={{ color: 'var(--color-accent)' }}>Cult</span>
-                  </span>{' '}
-                  <span className="uppercase tracking-wider">SHOP</span>
-                </span>
-              ) : (
-                link.label
-              )}
-            </Link>
+          const active = link.external ? false : (link.href === '/' ? isHome : pathname.startsWith(link.href))
+          const cls = `relative text-xs font-medium uppercase tracking-wider py-2 px-3 rounded-lg transition-colors ${
+            mounted && active
+              ? 'text-text bg-accent/8'
+              : 'text-text-muted hover:text-text hover:bg-accent/5'
+          }`
+          const content = link.branded ? (
+            <span className="whitespace-nowrap">
+              <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, textTransform: 'none' }}>
+                <span style={{ color: 'var(--color-text)' }}>Mey</span>
+                <span style={{ color: 'var(--color-accent)' }}>Cult</span>
+              </span>{' '}
+              <span className="uppercase tracking-wider">SHOP</span>
+            </span>
+          ) : (
+            link.label
+          )
+          return link.external ? (
+            <a key={link.href} href={link.href} className={cls}>{content}</a>
+          ) : (
+            <Link key={link.href} href={link.href} className={cls}>{content}</Link>
           )
         })}
       </div>

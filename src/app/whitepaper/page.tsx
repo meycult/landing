@@ -24,7 +24,7 @@ export default function WhitepaperPage() {
         <div className="space-y-10">
 
           <Section title="Abstract">
-            <p><BrandName /> is a gamified, sweepstakes-legal prediction market. Quests are seeded automatically every hour from <strong className="text-text">Polymarket</strong> via an AI extraction pipeline, then wagered on through an RPG lens. It runs a dual-currency system — <InfluenceText /> (CLTINF), a purchasable free-to-play token, and <FateText /> (CLTFTE), a $1-pegged sweepstakes prize token that is never sold directly and is redeemable for USDC. Wagers settle <strong className="text-text">parimutuel</strong> (winners split the losing pool) with a flat <strong className="text-text">5% house fee</strong>. Built on Base (Coinbase L2) with a custodial treasury, Supabase auth, and Privy embedded wallets. Part of the 12 Labors of <GodEmperorBrand /> series — solo + AI, built in public.</p>
+            <p><BrandName /> is a gamified, sweepstakes-legal prediction market. Quests are seeded automatically every hour from <strong className="text-text">Polymarket</strong> via an AI extraction pipeline, then wagered on through an RPG lens. It runs a dual-currency system — <InfluenceText /> (MEYINF), a purchasable free-to-play token, and <FateText /> (MEYFTE), a $1-pegged sweepstakes prize token that is never sold directly and is redeemable for USDC. Wagers settle <strong className="text-text">parimutuel</strong> (winners split the losing pool) with a flat <strong className="text-text">5% house fee</strong>. Built on Base (Coinbase L2) with a custodial treasury, Supabase auth, and Privy embedded wallets. Part of the 12 Labors of <GodEmperorBrand /> series — solo + AI, built in public.</p>
           </Section>
 
           <Section title="1. Introduction">
@@ -65,9 +65,9 @@ export default function WhitepaperPage() {
           </Section>
 
           <Section title="3. Token Economy">
-            <h3 className="text-sm font-bold text-white mb-2"><InfluenceText size={15} /> (CLTINF) — Play Token</h3>
+            <h3 className="text-sm font-bold text-white mb-2"><InfluenceText size={15} /> (MEYINF) — Play Token</h3>
             <p>Free-to-play engagement currency. Soulbound (non-transferable), unlimited supply, purchasable in Store packs and earned through play. <strong className="text-text">Never redeemable for cash</strong> — this is the &quot;Gold Coin&quot; tier. Wagered via gasless burn/mint. SEC posture: digital tool, not a security.</p>
-            <h3 className="text-sm font-bold text-white mt-4 mb-2"><FateText size={15} /> (CLTFTE) — Sweeps Prize Token</h3>
+            <h3 className="text-sm font-bold text-white mt-4 mb-2"><FateText size={15} /> (MEYFTE) — Sweeps Prize Token</h3>
             <p>$1-pegged, 1:1 USDC-backed. <strong className="text-text">Never sold directly</strong> — only received as a free bonus with Influence pack purchases or via free Alternative Methods of Entry (AMOE). Redeemable for USDC 1:1 after a playthrough requirement and a $50 minimum. Fate minting is reserve-controlled; the reserve is segregated from house revenue.</p>
           </Section>
 
@@ -103,8 +103,8 @@ export default function WhitepaperPage() {
               <table className="table-glass">
                 <thead><tr><th>Contract</th><th>Standard</th><th>Role</th></tr></thead>
                 <tbody>
-                  <tr><td>CultInfluence.sol</td><td>ERC-20 + ERC-5192 (soulbound)</td><td>Play token · mint/burn by role</td></tr>
-                  <tr><td>CultFate.sol</td><td>ERC-20 + Burnable + Timelock</td><td>Sweeps token · reserve-minted</td></tr>
+                  <tr><td>MeyInfluence.sol</td><td>ERC-20 + ERC-5192 (soulbound)</td><td>Play token · mint/burn by role</td></tr>
+                  <tr><td>MeyFate.sol</td><td>ERC-20 + Burnable + Timelock</td><td>Sweeps token · reserve-minted</td></tr>
                   <tr><td>QuestFragment.sol</td><td>ERC-1155 + EIP-712</td><td>Outcome collectibles (roadmap)</td></tr>
                 </tbody>
               </table>
@@ -131,7 +131,7 @@ export default function WhitepaperPage() {
           <Section title="9. Roadmap">
             <div className="space-y-4">
               <PhaseCard phase="1" title="Foundation" details="Brand, design system, React app, Supabase auth + Privy wallets. Live at app.meycult.com." />
-              <PhaseCard phase="2" title="Contracts & Seeding" details={<>CLTINF, CLTFTE, and QuestFragment deployed to Base Sepolia and tested with Foundry. Hourly Polymarket auto-seeding via a Python FastAPI service with DeepSeek LLM extraction, six Hero types, and live odds/volume/deadline sync.</>} />
+              <PhaseCard phase="2" title="Contracts & Seeding" details={<>MEYINF, MEYFTE, and QuestFragment deployed to Base Sepolia and tested with Foundry. Hourly Polymarket auto-seeding via a Python FastAPI service with DeepSeek LLM extraction, six Hero types, and live odds/volume/deadline sync.</>} />
               <PhaseCard phase="3" title="Markets & Crypto" details={<>Live parimutuel wagering with a custodial treasury. <FateText /> (primary, USDC-backed) and <InfluenceText /> (gasless burn/mint) pools, 5% fee, automatic resolution + payout from Polymarket. Store with Influence packs, Fate bonuses, and supporter tiers.</>} />
               <PhaseCard phase="4" title="Sweepstakes & Redemption" details="Free daily Fate faucet + mail-in AMOE, playthrough-gated redemption to USDC ($50 min), fee-revenue withdrawal, and treasury accounting with strict reserve segregation." />
               <PhaseCard phase="5" title="Mainnet Launch" details="Security audit (Code4rena/Sherlock), Gnosis Safe multisig, Base mainnet deploy, KYC provider, legal sign-off, and the RPG progression layer (heroes, cosmetics, collectible QuestFragments)." />
