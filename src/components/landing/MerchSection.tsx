@@ -20,6 +20,9 @@ export default function MerchSection() {
       <p className="section-subtitle">
         Physical merch — shipped worldwide. Visit the <a href={MERCH_URL} target="_blank" rel="noopener noreferrer" className="text-accent underline">MeyCult Merch Store</a>.
       </p>
+      <p className="text-center text-xs text-text-muted mt-2 max-w-lg mx-auto">
+        Every purchase directly funds development. When mainnet launches, all merch buyers will receive <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700 }}><span style={{ color: 'var(--color-text)' }}>Mey</span><span style={{ color: 'var(--color-accent)' }}>Fate</span></span> equivalent to their order — back the project, earn your stake.
+      </p>
 
       <div className="flex flex-wrap justify-center gap-5 max-w-5xl mx-auto mt-6">
         {items.map((item) => (
