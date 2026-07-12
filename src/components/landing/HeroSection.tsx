@@ -65,19 +65,19 @@ export default function HeroSection() {
       <p className="text-base text-text max-w-md mt-3 font-medium">
         Bet on real-world events. Win crypto. Free to play.
       </p>
-      <p className="text-xs text-text-muted max-w-md mt-1.5">
+      <LaunchButton className="mt-4" />
+      <p className="text-xs text-text-muted max-w-md mt-3">
         AI-seeded prediction markets, reimagined as an RPG on Base L2.
       </p>
-      <LaunchButton className="mt-4" />
-      <p className="text-[11px] text-text-muted mt-3 tracking-wide">
+      <p className="text-[11px] text-text-muted mt-1.5 tracking-wide">
         Free daily <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700 }}><span style={{ color: 'var(--color-text)' }}>Mey</span><span style={{ color: 'var(--color-accent)' }}>Influence</span></span> · real USDC cash-out · sweepstakes-legal
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-8 w-full max-w-2xl">
         {[
-          { n: '1', t: 'Pick a quest', d: 'Real-world events, seeded hourly from Polymarket.' },
-          { n: '2', t: 'Wager MeyFate', d: 'Back YES or NO with free or premium tokens.' },
-          { n: '3', t: 'Win the pool', d: 'Winners split the pot. Cash out to USDC.' },
+          { n: '1', t: <>Pick a quest</>, d: 'Real-world events, seeded hourly from Polymarket.' },
+          { n: '2', t: <>Wager <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, textTransform: 'none' }}><span style={{ color: 'var(--color-text)' }}>Mey</span><span style={{ color: 'var(--color-accent)' }}>Fate</span></span></>, d: 'Back YES or NO with free or premium tokens.' },
+          { n: '3', t: <>Win the pool</>, d: 'Winners split the pot. Cash out to USDC.' },
         ].map((s) => (
           <div key={s.n} className="landing-card p-4 text-center">
             <div className="w-8 h-8 rounded-full mx-auto mb-2 flex items-center justify-center text-sm font-bold"

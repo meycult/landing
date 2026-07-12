@@ -4,12 +4,19 @@ import { InfluenceIcon, FateIcon } from '@/components/TokenIcons'
 const SHOP_URL = 'https://shop.meycult.com'
 
 const packs = [
-  { name: 'Acolyte', price: 30, influence: '45,000', fate: 30, merch: 'Beanie', img: '/products/cult-beanie-meycult-0.jpg' },
-  { name: 'Oracle', price: 60, influence: '90,000', fate: 60, merch: 'Mug', img: '/products/cult-mug-meycult-0.jpg' },
-  { name: 'High Oracle', price: 100, influence: '150,000', fate: 100, merch: 'Tee', img: '/products/cult-tee-meycult-0.jpg' },
-  { name: 'Prophet', price: 200, influence: '400,000', fate: 200, merch: 'Joggers + Tee', img: '/products/cult-joggers-meycult-0.jpg' },
-  { name: 'Ascendant', price: 400, influence: '1,000,000', fate: 400, merch: 'Full 5-piece set', img: '/products/cult-hoodie-meycult-0.jpg', featured: true },
+  { name: 'Acolyte', price: 30, influence: '45,000', fate: 30, merch: 'Cult Beanie', img: '/products/cult-beanie-meycult-0.jpg' },
+  { name: 'Oracle', price: 60, influence: '90,000', fate: 60, merch: 'Cult Mug', img: '/products/cult-mug-meycult-0.jpg' },
+  { name: 'High Oracle', price: 100, influence: '150,000', fate: 100, merch: 'Cult Tee', img: '/products/cult-tee-meycult-0.jpg' },
+  { name: 'Prophet', price: 200, influence: '400,000', fate: 200, merch: 'Cult Joggers + Cult Tee', img: '/products/cult-joggers-meycult-0.jpg' },
+  { name: 'Ascendant', price: 400, influence: '1,000,000', fate: 400, merch: 'Full Cult Set (5 pieces)', img: '/products/cult-hoodie-meycult-0.jpg', featured: true },
 ]
+
+function MeyInfluenceName() {
+  return <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700 }}><span style={{ color: 'var(--color-text)' }}>Mey</span><span style={{ color: 'var(--color-accent)' }}>Influence</span></span>
+}
+function MeyFateName() {
+  return <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700 }}><span style={{ color: 'var(--color-text)' }}>Mey</span><span style={{ color: 'var(--color-accent)' }}>Fate</span></span>
+}
 
 export default function SupporterPackSection() {
   return (
@@ -19,13 +26,23 @@ export default function SupporterPackSection() {
         Supporter Packs
       </h2>
       <p className="section-subtitle">
-        Buy <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700 }}><span style={{ color: 'var(--color-text)' }}>Mey</span><span style={{ color: 'var(--color-accent)' }}>Influence</span></span> to play — every pack throws in bonus{' '}
-        <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700 }}><span style={{ color: 'var(--color-text)' }}>Mey</span><span style={{ color: 'var(--color-accent)' }}>Fate</span></span>, exclusive merch, and future loot drops.
+        Buy <MeyInfluenceName /> to play — every pack throws in bonus <MeyFateName />, exclusive merch, and future loot drops.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto mt-6">
+      <div className="text-center mt-4 mb-8">
+        <a href={SHOP_URL} target="_blank" rel="noopener noreferrer"
+          className="inline-block rounded-lg p-[2px] hover:scale-[1.02] transition-all" style={{ background: 'linear-gradient(135deg, #22e06a, #6effa0)' }}>
+          <span className="block px-8 py-3 rounded-[6px] font-bold text-sm tracking-wider"
+            style={{ background: 'linear-gradient(135deg, #030d07, #0d5c35)', color: '#fff' }}>
+            Visit the <BrandName /> Shop
+          </span>
+        </a>
+        <p className="text-xs text-text-muted mt-3">No purchase necessary — claim free <MeyInfluenceName /> daily in the app.</p>
+      </div>
+
+      <div className="flex flex-wrap justify-center gap-5 max-w-5xl mx-auto">
         {packs.map((p) => (
-          <div key={p.name} className="landing-card flex flex-col overflow-hidden group"
+          <div key={p.name} className="landing-card flex flex-col overflow-hidden group w-full sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)]"
             style={p.featured ? { borderColor: 'var(--color-accent)', boxShadow: '0 0 30px rgba(34,224,106,0.18)' } : {}}>
             <div className="aspect-square bg-surface/10 flex items-center justify-center p-4 overflow-hidden">
               <img src={p.img} alt={p.merch} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" loading="lazy" />
@@ -36,9 +53,9 @@ export default function SupporterPackSection() {
                 <span className="text-lg font-bold text-white" style={{ fontVariantNumeric: 'tabular-nums' }}>${p.price}</span>
               </div>
               <div className="space-y-1 text-sm">
-                <p className="flex items-center gap-1.5"><InfluenceIcon size={14} /> {p.influence} <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700 }}><span style={{ color: 'var(--color-text)' }}>Mey</span><span style={{ color: 'var(--color-accent)' }}>Influence</span></span></p>
-                <p className="flex items-center gap-1.5"><FateIcon size={14} /> {p.fate} <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700 }}><span style={{ color: 'var(--color-text)' }}>Mey</span><span style={{ color: 'var(--color-accent)' }}>Fate</span></span></p>
-                <p className="text-text-muted text-xs">🎁 {p.merch} <span className="opacity-60">(one-time)</span></p>
+                <p className="flex items-center gap-1.5"><InfluenceIcon size={14} /> {p.influence} <MeyInfluenceName /></p>
+                <p className="flex items-center gap-1.5"><FateIcon size={14} /> {p.fate} <MeyFateName /></p>
+                <p className="text-text-muted text-xs">{p.merch} <span className="opacity-60">(one-time)</span></p>
               </div>
               <a href={SHOP_URL} target="_blank" rel="noopener noreferrer"
                 className="mt-1 block text-center px-4 py-2 rounded-lg text-xs font-bold tracking-wider transition-all hover:opacity-90"
@@ -48,17 +65,6 @@ export default function SupporterPackSection() {
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="text-center mt-8">
-        <a href={SHOP_URL} target="_blank" rel="noopener noreferrer"
-          className="inline-block rounded-lg p-[2px] hover:scale-[1.02] transition-all" style={{ background: 'linear-gradient(135deg, #22e06a, #6effa0)' }}>
-          <span className="block px-8 py-3 rounded-[6px] font-bold text-sm tracking-wider"
-            style={{ background: 'linear-gradient(135deg, #030d07, #0d5c35)', color: '#fff' }}>
-            Visit the <BrandName /> Shop
-          </span>
-        </a>
-        <p className="text-xs text-text-muted mt-3">No purchase necessary — claim free <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700 }}><span style={{ color: 'var(--color-text)' }}>Mey</span><span style={{ color: 'var(--color-accent)' }}>Influence</span></span> daily in the app.</p>
       </div>
     </section>
   )
