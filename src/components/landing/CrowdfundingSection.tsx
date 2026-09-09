@@ -21,7 +21,7 @@ export default function CrowdfundingSection() {
       )
       const { error } = await supabase.from('crowdfunding_signups').insert({
         email: email.trim(),
-        source: 'landing',
+        source: 'web',
       })
       if (error && error.code !== '23505') throw error
       setStatus('done')

@@ -1,4 +1,4 @@
-# <img src="public/favicon.svg" width="28" /> MeyCult — Landing
+# <img src="public/favicon.svg" width="28" /> MeyCult — Web
 
 **meycult.com** — The marketing site, whitepaper, and merch shop for the MeyCult prediction market.
 
