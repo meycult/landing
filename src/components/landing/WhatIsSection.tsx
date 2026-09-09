@@ -18,7 +18,7 @@ export default function WhatIsSection() {
         </p>
 
         <h2 className="text-5xl font-light uppercase tracking-[0.08em]"
-          style={{ color: '#ffffff', fontFamily: 'var(--font-heading)', textShadow: '0 0 20px rgba(34,224,106,0.3)' }}>
+          style={{ color: '#ffffff', fontFamily: 'var(--font-heading)', textShadow: '0 0 20px rgba(255,230,0,0.2)' }}>
           We made them an RPG.
         </h2>
 

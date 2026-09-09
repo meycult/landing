@@ -11,7 +11,7 @@ export default function HeroSection() {
           style={{
             width: '450px',
             height: '400px',
-            background: 'radial-gradient(circle at 50% 40%, rgba(34,224,106,0.12) 0%, transparent 70%)',
+            background: 'radial-gradient(circle at 50% 40%, rgba(255,230,0,0.08) 0%, transparent 70%)',
             filter: 'blur(80px)',
             top: '-70px',
           }}
@@ -23,7 +23,7 @@ export default function HeroSection() {
             height: 0,
             borderLeft: '260px solid transparent',
             borderRight: '260px solid transparent',
-            borderBottom: '320px solid rgba(34,224,106,0.08)',
+            borderBottom: '320px solid rgba(255,230,0,0.05)',
             filter: 'blur(50px)',
             top: '-40px',
           }}
@@ -33,7 +33,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative text-[5rem] leading-none mt-2 tracking-wider font-bold">
+      <div className="relative text-[5rem] leading-none mt-8 tracking-wider font-bold">
         <span className="relative">
           <BrandName />
         </span>

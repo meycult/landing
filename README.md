@@ -81,9 +81,9 @@ Copy `.env.example` to `.env.local` and fill in:
 
 | Token | Value | Usage |
 |---|---|---|
-| `--color-accent` | `#22e06a` | Primary jade green |
-| `--color-bg` | `#030d07` | Background black |
-| `--color-text` | `#d6ffe2` | Body text |
+| `--color-accent` | `#FFE600` | Primary illuminati neon yellow |
+| `--color-bg` | `#0B0A02` | Background warm black |
+| `--color-text` | `#FFF9DB` | Body text (papyrus) |
 | `--color-premium-400` | `#f0c040` | <img src="public/products/fate.png" width="12" /> Fate gold |
 | `--font-heading` | Rajdhani | Section titles |
 | `--font-logo` | Chakra Petch | Brand names |

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Rajdhani, Space_Grotesk, Space_Mono, Chakra_Petch } from 'next/font/google'
+import { Rajdhani, Space_Grotesk, Space_Mono, Chakra_Petch, New_Rocker } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import MobileNavbar from '@/components/MobileNavbar'
 import Footer from '@/components/Footer'
@@ -30,6 +30,12 @@ const chakraPetch = Chakra_Petch({
   variable: '--font-logo',
 })
 
+const newRocker = New_Rocker({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-cult',
+})
+
 export const metadata: Metadata = {
   title: 'MeyCult',
   description: 'A gamified prediction market on Base L2. Turn real-world predictions into an RPG adventure. Welcome to the Cult.',
@@ -43,7 +49,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${rajdhani.variable} ${spaceGrotesk.variable} ${spaceMono.variable} ${chakraPetch.variable} min-h-screen bg-bg text-text font-sans antialiased`}>
+      <body className={`${rajdhani.variable} ${spaceGrotesk.variable} ${spaceMono.variable} ${chakraPetch.variable} ${newRocker.variable} min-h-screen bg-bg text-text font-sans antialiased`}>
         <CornerGlow />
         <MobileNavbar />
         <Navbar />

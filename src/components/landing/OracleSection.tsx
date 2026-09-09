@@ -40,7 +40,7 @@ export default function OracleSection() {
           </div>
           <div>
             <h2 className="text-2xl font-light uppercase tracking-[0.08em]"
-              style={{ color: '#ffffff', fontFamily: 'var(--font-heading)', textShadow: '0 0 12px rgba(34,224,106,0.2)' }}>
+              style={{ color: '#ffffff', fontFamily: 'var(--font-heading)', textShadow: '0 0 12px rgba(255,230,0,0.15)' }}>
               You Are an Oracle
             </h2>
             <p className="text-xs text-text-muted mt-1 leading-relaxed">
@@ -51,7 +51,7 @@ export default function OracleSection() {
 
         <div className="relative pl-[68px] mt-4">
           <div className="absolute left-[30px] top-0 bottom-2 w-px"
-            style={{ background: 'linear-gradient(180deg, rgba(34,224,106,0.4), rgba(34,224,106,0.1), transparent)' }}
+            style={{ background: 'linear-gradient(180deg, rgba(255,230,0,0.3), rgba(255,230,0,0.07), transparent)' }}
           />
 
           <div className="space-y-6">
@@ -60,7 +60,7 @@ export default function OracleSection() {
               return (
                 <div key={node.title} className="relative">
                   <div className="absolute left-[-28px] top-4 w-[13px] h-[13px] rounded-full"
-                    style={{ border: '2px solid rgba(34,224,106,0.4)', backgroundColor: 'var(--color-surface)' }}
+                    style={{ border: '2px solid rgba(255,230,0,0.3)', backgroundColor: 'var(--color-surface)' }}
                   />
                   <div className="landing-card p-4">
                     <h3 className="text-sm font-bold text-text uppercase tracking-wider flex items-center gap-2">

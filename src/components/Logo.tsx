@@ -10,7 +10,7 @@ export default function Logo({ size = 24, className }: { size?: number; classNam
           style={{ fontFamily: 'var(--font-logo)' }}
         >
           <span style={{ color: 'var(--color-text)' }}>Mey</span>
-          <span style={{ color: 'var(--color-accent)', textShadow: '0 0 12px rgba(255,255,255,0.5), 0 0 30px rgba(255,255,255,0.2)' }}>Cult</span>
+          <span className="brand-cult" style={{ textShadow: '0 0 12px rgba(255,255,255,0.5), 0 0 30px rgba(255,255,255,0.2)' }}>Cult</span>
         </div>
         <div
           className="text-[10px] uppercase tracking-widest mt-0.5"

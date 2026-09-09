@@ -87,9 +87,9 @@ export default function StreamSection() {
                 className="absolute inset-0 w-full h-full object-cover group-hover:opacity-80 transition-opacity"
               />
               <span className="relative rounded-full p-[2px] group-hover:scale-110 transition-transform"
-                style={{ background: 'linear-gradient(135deg, #22e06a, #6effa0)' }}>
+                style={{ background: 'linear-gradient(135deg, #FFE600, #FFF7A1)' }}>
                 <span className="flex items-center justify-center w-16 h-16 rounded-full"
-                  style={{ background: 'linear-gradient(135deg, #030d07, #0d5c35)' }}>
+                  style={{ background: 'linear-gradient(135deg, #0B0A02, #4A3D00)' }}>
                   <Play size={28} className="text-accent fill-accent ml-1" />
                 </span>
               </span>

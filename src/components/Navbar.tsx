@@ -30,14 +30,14 @@ export default function Navbar() {
         background: 'rgba(255,255,255,0.05)',
         backdropFilter: 'blur(24px) saturate(160%)',
         WebkitBackdropFilter: 'blur(24px) saturate(160%)',
-        border: '1px solid rgba(34,224,106,0.12)',
-        boxShadow: '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.06), 0 0 40px rgba(34,224,106,0.2)',
+        border: '1px solid rgba(255,230,0,0.12)',
+        boxShadow: '0 8px 32px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.06), 0 0 40px rgba(255,230,0,0.12)',
       }}
     >
       <div
         className="absolute top-0 left-[15%] right-[15%] h-px"
         style={{
-          background: 'linear-gradient(90deg, transparent, rgba(34,224,106,0.4), rgba(110,255,160,0.5), transparent)',
+          background: 'linear-gradient(90deg, transparent, rgba(255,230,0,0.4), rgba(255,247,161,0.5), transparent)',
         }}
       />
       <Logo size={24} className="!gap-2" />
@@ -54,7 +54,7 @@ export default function Navbar() {
             <span className="whitespace-nowrap">
               <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, textTransform: 'none' }}>
                 <span style={{ color: 'var(--color-text)' }}>Mey</span>
-                <span style={{ color: 'var(--color-accent)' }}>Cult</span>
+                <span className="brand-cult">Cult</span>
               </span>{' '}
               <span className="uppercase tracking-wider">SHOP</span>
             </span>

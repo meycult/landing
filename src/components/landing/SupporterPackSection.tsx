@@ -31,9 +31,9 @@ export default function SupporterPackSection() {
 
       <div className="text-center mt-4 mb-8">
         <a href={SHOP_URL} target="_blank" rel="noopener noreferrer"
-          className="inline-block rounded-lg p-[2px] hover:scale-[1.02] transition-all" style={{ background: 'linear-gradient(135deg, #22e06a, #6effa0)' }}>
-          <span className="block px-8 py-3 rounded-[6px] font-bold text-sm tracking-wider"
-            style={{ background: 'linear-gradient(135deg, #030d07, #0d5c35)', color: '#fff' }}>
+          className="inline-block rounded-lg p-[2px] hover:scale-[1.02] transition-all" style={{ background: 'linear-gradient(135deg, #FFE600, #FFF7A1)' }}>
+            <span className="block px-8 py-3 rounded-[6px] font-bold text-sm tracking-wider"
+              style={{ background: 'linear-gradient(135deg, #0B0A02, #4A3D00)', color: '#fff' }}>
             Visit the <BrandName /> Shop
           </span>
         </a>
@@ -43,7 +43,7 @@ export default function SupporterPackSection() {
       <div className="flex flex-wrap justify-center gap-5 max-w-5xl mx-auto">
         {packs.map((p) => (
           <div key={p.name} className="landing-card flex flex-col overflow-hidden group w-full sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)]"
-            style={p.featured ? { borderColor: 'var(--color-accent)', boxShadow: '0 0 30px rgba(34,224,106,0.18)' } : {}}>
+            style={p.featured ? { borderColor: 'var(--color-accent)', boxShadow: '0 0 30px rgba(255,230,0,0.12)' } : {}}>
             <div className="aspect-square bg-surface/10 flex items-center justify-center p-4 overflow-hidden">
               <img src={p.img} alt={p.merch} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" loading="lazy" />
             </div>
@@ -59,8 +59,8 @@ export default function SupporterPackSection() {
               </div>
               <a href={SHOP_URL} target="_blank" rel="noopener noreferrer"
                 className="mt-1 block text-center px-4 py-2 rounded-lg text-xs font-bold tracking-wider transition-all hover:opacity-90"
-                style={{ background: 'linear-gradient(135deg, #030d07, #0d5c35)', border: '1px solid rgba(34,224,106,0.4)', color: '#fff' }}>
-                Get it on <span style={{ fontFamily: 'var(--font-logo)', textTransform: 'none' }}><span style={{ color: '#fff' }}>Mey</span><span style={{ color: 'var(--color-accent)' }}>Cult</span></span> Shop
+                style={{ background: 'linear-gradient(135deg, #0B0A02, #4A3D00)', border: '1px solid rgba(255,230,0,0.4)', color: '#fff' }}>
+                Get it on <span style={{ fontFamily: 'var(--font-logo)', textTransform: 'none' }}><span style={{ color: '#fff' }}>Mey</span><span className="brand-cult">Cult</span></span> Shop
               </a>
             </div>
           </div>

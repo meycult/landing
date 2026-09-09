@@ -17,14 +17,14 @@ export default function RoadmapSection() {
 
       <div className="relative max-w-5xl mx-auto">
         <div className="hidden md:block absolute top-8 left-[10%] right-[10%] h-px"
-          style={{ background: 'linear-gradient(90deg, transparent, rgba(34,224,106,0.4), rgba(34,224,106,0.2), rgba(34,224,106,0.4), transparent)' }}
+          style={{ background: 'linear-gradient(90deg, transparent, rgba(255,230,0,0.3), rgba(255,230,0,0.15), rgba(255,230,0,0.3), transparent)' }}
         />
 
         <div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-stretch">
           {stops.map((stop, i) => (
             <div key={stop.phase} className="flex md:flex-col items-center gap-3 md:gap-2 md:text-center flex-1 relative">
               <div className="flex-shrink-0 w-14 h-14 rounded-full landing-card flex items-center justify-center"
-                style={stop.filled ? { borderColor: 'var(--color-accent)', borderWidth: '2px', boxShadow: '0 0 30px rgba(34,224,106,0.35), 0 0 60px rgba(34,224,106,0.15)' } : {}}
+                style={stop.filled ? { borderColor: 'var(--color-accent)', borderWidth: '2px', boxShadow: '0 0 30px rgba(255,230,0,0.25), 0 0 60px rgba(255,230,0,0.1)' } : {}}
               >
                 <span className="text-lg font-bold text-text" style={{ fontFamily: 'var(--font-heading)' }}>
                   {stop.phase}
@@ -46,19 +46,19 @@ export default function RoadmapSection() {
         <Link
           href="/whitepaper"
           className="inline-block rounded-lg p-[2px] hover:scale-[1.02] transition-all"
-          style={{ background: 'linear-gradient(135deg, #22e06a, #6effa0)' }}
+          style={{ background: 'linear-gradient(135deg, #FFE600, #FFF7A1)' }}
         >
           <span
             className="block px-8 py-3 rounded-[6px] font-bold text-sm tracking-wider hover:opacity-90 transition-all"
             style={{
-              background: 'linear-gradient(135deg, #030d07, #0d5c35)',
+              background: 'linear-gradient(135deg, #0B0A02, #4A3D00)',
               color: '#ffffff',
-              boxShadow: '0 0 80px rgba(34,224,106,0.08), 0 0 120px rgba(34,224,106,0.05)',
+              boxShadow: '0 0 80px rgba(255,230,0,0.08), 0 0 120px rgba(255,230,0,0.05)',
             }}
           >
             <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, textTransform: 'none' }}>
               <span style={{ color: '#ffffff' }}>Mey</span>
-              <span style={{ color: 'var(--color-accent)' }}>Cult</span>
+              <span className="brand-cult">Cult</span>
             </span>{' '}
             <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700 }}>Whitepaper</span>
           </span>

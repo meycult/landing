@@ -14,7 +14,7 @@ export default function WhitepaperPage() {
             style={{ fontFamily: 'var(--font-heading)', color: '#ffffff' }}>
             <span style={{ fontFamily: 'var(--font-logo)', fontWeight: 700, textTransform: 'none' }}>
               <span style={{ color: 'var(--color-text)' }}>Mey</span>
-              <span style={{ color: 'var(--color-accent)' }}>Cult</span>
+              <span className="brand-cult">Cult</span>
             </span>{' '}Whitepaper
           </h1>
           <p className="text-sm text-text-muted mt-2">Version 2.0 — July 2026 — <GodEmperorBrand /></p>
@@ -160,7 +160,7 @@ export default function WhitepaperPage() {
 
           <Section title="13. Conclusion">
             <p><BrandName /> combines AI-seeded prediction markets, parimutuel settlement, a dual-currency sweepstakes economy, and an RPG layer on Base L2 — making real-world speculation approachable and legal for everyone.</p>
-            <p className="mt-3 font-bold text-lg text-center" style={{ fontFamily: 'var(--font-logo)', color: 'var(--color-accent)', textShadow: '0 0 12px rgba(34,224,106,0.5)' }}>Welcome to the Cult. Your quest awaits.</p>
+            <p className="mt-3 font-bold text-lg text-center" style={{ fontFamily: 'var(--font-logo)', color: 'var(--color-accent)', textShadow: '0 0 12px rgba(255,230,0,0.35)' }}>Welcome to the Cult. Your quest awaits.</p>
           </Section>
 
         </div>

@@ -1,31 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #030d07;
-  --color-surface: #071a0f;
-  --color-panel: rgba(8, 26, 16, 0.55);
-  --color-accent: #22e06a;
-  --color-accent-2: #6effa0;
-  --color-text: #d6ffe2;
-  --color-text-muted: rgba(214, 255, 226, 0.55);
-  --color-line: rgba(34, 224, 106, 0.18);
-  --color-yes: #22e06a;
+  --color-bg: #0B0A02;
+  --color-surface: #171402;
+  --color-panel: rgba(26, 22, 3, 0.55);
+  --color-accent: #FFE600;
+  --color-accent-2: #FFF7A1;
+  --color-text: #FFF9DB;
+  --color-text-muted: rgba(255, 249, 219, 0.55);
+  --color-line: rgba(255, 230, 0, 0.18);
+  --color-yes: #FFE600;
   --color-no: #e04a4a;
-  --color-yes-bg: rgba(34, 224, 106, 0.12);
+  --color-yes-bg: rgba(255, 230, 0, 0.08);
   --color-no-bg: rgba(224, 74, 74, 0.12);
-  --color-success: #22e06a;
+  --color-success: #FFE600;
   --color-danger: #e04a4a;
-  --color-warning: #b8ff33;
-  --color-info: #22e06a;
-  --color-premium-400: #f0c040;
-  --color-premium-500: #d4a020;
-  --color-premium-600: #b08010;
+  --color-warning: #FF9D00;
+  --color-info: #FFE600;
+  --color-premium-400: #FFB000;
+  --color-premium-500: #9C7500;
+  --color-premium-600: #6B4E00;
   --font-heading: "Rajdhani", sans-serif;
   --font-body: "Space Grotesk", sans-serif;
   --font-mono: "Space Mono", monospace;
   --font-logo: "Chakra Petch", sans-serif;
   --radius: 4px;
-  --glow: 0 0 20px rgba(34, 224, 106, 0.25);
+  --glow: 0 0 20px rgba(255, 230, 0, 0.18);
 }
 
 @layer base {
@@ -67,13 +67,13 @@
 .landing-card {
   position: relative;
   border-radius: 16px;
-  border: 1px solid rgba(34, 224, 106, 0.12);
+  border: 1px solid rgba(255, 230, 0, 0.12);
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(24px) saturate(160%);
   -webkit-backdrop-filter: blur(24px) saturate(160%);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25),
               inset 0 1px 0 rgba(255, 255, 255, 0.06),
-              0 0 40px rgba(34, 224, 106, 0.2);
+              0 0 40px rgba(255, 230, 0, 0.12);
 }
 .landing-card > * {
   position: relative;
@@ -145,7 +145,7 @@ h2 {
   left: -15%;
   width: 70vw;
   height: 70vh;
-  background: radial-gradient(circle, rgba(34, 224, 106, 0.15) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(255, 230, 0, 0.09) 0%, transparent 65%);
   filter: blur(100px);
   animation: glowTL 18s ease-in-out infinite alternate;
 }
@@ -155,7 +155,7 @@ h2 {
   right: -12%;
   width: 40vw;
   height: 40vh;
-  background: radial-gradient(circle, rgba(34, 224, 106, 0.10) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(255, 230, 0, 0.06) 0%, transparent 65%);
   filter: blur(70px);
   animation: glowTR 20s ease-in-out 3s infinite alternate;
 }
@@ -165,7 +165,7 @@ h2 {
   left: -12%;
   width: 45vw;
   height: 45vh;
-  background: radial-gradient(circle, rgba(34, 224, 106, 0.10) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(255, 230, 0, 0.06) 0%, transparent 65%);
   filter: blur(80px);
   animation: glowBL 17s ease-in-out 6s infinite alternate;
 }
@@ -175,7 +175,7 @@ h2 {
   right: -15%;
   width: 65vw;
   height: 65vh;
-  background: radial-gradient(circle, rgba(34, 224, 106, 0.13) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(255, 230, 0, 0.08) 0%, transparent 65%);
   filter: blur(110px);
   animation: glowBR 22s ease-in-out 9s infinite alternate;
 }
@@ -185,7 +185,7 @@ h2 {
   left: 30%;
   width: 50vw;
   height: 50vh;
-  background: radial-gradient(circle, rgba(34, 224, 106, 0.06) 0%, transparent 75%);
+  background: radial-gradient(circle, rgba(255, 230, 0, 0.04) 0%, transparent 75%);
   filter: blur(90px);
   animation: glowCT 25s ease-in-out 5s infinite alternate;
 }
@@ -195,7 +195,7 @@ h2 {
   left: 20%;
   width: 40vw;
   height: 40vh;
-  background: radial-gradient(circle, rgba(34, 224, 106, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 230, 0, 0.05) 0%, transparent 70%);
   filter: blur(85px);
   animation: glowCB 23s ease-in-out 7s infinite alternate;
 }
@@ -281,6 +281,15 @@ h2 {
   text-shadow: 0 0 12px var(--color-accent), 0 0 30px color-mix(in srgb, var(--color-accent) 50%, transparent);
 }
 
+/* ── Brand: "Cult" in MeyCult — New Rocker ── */
+.brand-cult {
+  font-family: var(--font-cult), var(--font-logo), sans-serif;
+  font-size: 1.10em; /* relative to Mey */
+  margin-left: -0.04em; /* gap Mey → Cult */
+  letter-spacing: -0.01em; /* gaps between Cult letters */
+  color: var(--color-accent);
+}
+
 .section-subtitle {
   color: var(--color-text-muted);
   font-size: 0.95rem;
@@ -307,7 +316,7 @@ h2 {
 
 .table-glass td {
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid rgba(34, 224, 106, 0.06);
+  border-bottom: 1px solid rgba(255, 230, 0, 0.06);
   font-size: 0.875rem;
 }
 
